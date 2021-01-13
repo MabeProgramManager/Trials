@@ -1,0 +1,16 @@
+def nomina():
+    print("Calulo de nomina")
+    horas=input("Cuantas horas trabajadas?:")
+    tarifa=input("Sueldo X hora?:")
+    try:
+        hr=float(horas)
+        tf=float(tarifa)
+        if hr>40.0:
+            compt=40*hr
+            extra=(hr-40)*tf*1.5
+            pay=comp+extra
+        else:
+            pay=hr*tf
+        print("Tu pago es de: $",pay)
+    except:
+        print("Tienes que usar datos validos")
