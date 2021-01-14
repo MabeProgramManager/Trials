@@ -1,0 +1,20 @@
+def extra(hr,tf):
+    ot=(hr-40)*tf*1.5
+    return ot
+
+def normal(hr,tf):
+    nor=40*tf
+    return nor
+
+thr=input("Tiempo")
+tthr=float(thr)
+tttf=input("Tarifa")
+ttf=float(tttf)
+textra=extra(tthr,ttf)
+print("pago tiempo extra $",textra)
+
+
+norma=normal(tthr,ttf)
+print("pago  tiempo normal $",norma)
+print("Pago total $",textra+norma)
+print("Muchas gracias")
