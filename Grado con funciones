@@ -1,0 +1,30 @@
+def validez(score):
+    if score >= 0 and score <= 1:
+        valido=1
+        return valido
+
+def grado(score):
+    if score >= 0.9:
+        nivel="A"
+    elif score>= 0.8:
+        nivel="B"
+    elif score>= 0.7:
+        nivel="C"
+    elif score>= 0.6:
+        nivel="D"
+    else:
+        nivel="Reprobado!"
+    return nivel
+
+sco=input("Score:")
+
+try:
+	sc=float(sco)
+	sirve=validez(sc) #si el valor esta en el rango correcto sirve=1
+	if sirve==1:
+		calif=grado(sc)
+		print(calif)
+	else:
+    	print("no ingresaste un score valido rango [0,1]")
+except:
+    print("Utiliza numeros entre 0 a 1")
