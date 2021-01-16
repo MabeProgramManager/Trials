@@ -1,0 +1,14 @@
+def count(palabra,letra):
+    contador=0
+    cant=0
+    while contador<len(palabra):
+        letter=palabra[contador]
+        if letter==letra:
+            cant=cant+1
+        contador=contador+1
+    return cant
+    
+texto=input("Que texto quieres analizar?:")
+letr=input("Que letra quieres contar en el texto?:")
+q=count(texto,letr)
+print("La letra",letr,"aparece",q,"veces")
