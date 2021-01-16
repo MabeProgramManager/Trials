@@ -1,0 +1,8 @@
+palabra=input("Que palabra quieres analizar?:")
+contador=0
+if palabra=="Reversa" or palabra=="reversa":
+    print("Fin del programa amiguitos")
+else:
+    while contador<len(palabra):
+        print("Letra #", len(palabra)-contador,palabra[-contador-1])
+        contador=contador+1
