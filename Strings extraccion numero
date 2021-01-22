@@ -1,0 +1,8 @@
+texto=input("Que texto quieres analizar?:")
+lug=texto.find(":")
+pos=lug+1
+number=texto[pos:]
+num=float(number)
+print("El numero es:",num)
+compr=num+1
+print("comprobacion=",compr)
