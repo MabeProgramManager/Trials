@@ -1,0 +1,15 @@
+def chop(listado):
+    long=len(listado)
+    del listado[long-1]
+    del listado[0]
+    print (listado)
+    return listado
+lista=list()
+while (True):
+    inp=input("Digita algo:")
+    if inp=="hecho":break
+    lista.append(inp)
+print("Lista es:",lista)
+print("Hay ",len(lista)," elementos en tu lista")
+nueva=chop(lista)
+print ("Nueva lista:",nueva)
