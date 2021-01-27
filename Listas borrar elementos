@@ -2,7 +2,6 @@ def chop(listado):
     long=len(listado)
     del listado[long-1]
     del listado[0]
-    print (listado)
     return listado
 lista=list()
 while (True):
