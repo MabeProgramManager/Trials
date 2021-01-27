@@ -1,0 +1,31 @@
+fname="romeo.txt"
+cadena=[]
+orden=[]
+filtrado=[]
+contador=0
+cont=0
+texto=open(fname)
+for line in texto:
+    linea=line.split()
+    print(linea)
+    cadena=cadena+linea
+long=len(cadena)
+while contador<long:
+    palabra=cadena[contador]
+    palabra=palabra.lower()
+    orden=orden+[palabra]
+    contador=contador+1
+orden.sort()
+contador=0
+while contador<(long-1):
+    palabra=orden[contador]
+    cont=contador+1
+    sigpal=orden[cont]
+    if palabra!=sigpal:
+        filtrado=filtrado+[palabra]
+    contador=contador+1
+    if contador==(long-1):
+        palabra=orden[contador]
+        filtrado=filtrado+[palabra]
+print("Lista filtrada es",filtrado)
+print("De longitud:",len(filtrado))
