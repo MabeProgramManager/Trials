@@ -1,0 +1,11 @@
+numlist=list()
+while (True):
+    inp=input("Digita un numero:")
+    if inp=="hecho":break
+    value=float(inp)
+    numlist.append(value)
+prom=sum(numlist)/len(numlist)
+print("Tu promedio es:",prom)
+print("Lista es:",numlist)
+print("suma es:",sum(numlist))
+print("Hay ",len(numlist),"en tu lista")
