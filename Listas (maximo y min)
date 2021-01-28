@@ -1,0 +1,14 @@
+serie=[]
+while True:
+    dato=input("Digita el dato:")
+    if dato=="hecho":
+        break
+    else:
+        try:
+            dato=float(dato)
+            serie=serie+[dato]
+        except:
+            print("Digita un dato valido por favor:",dato,"no es valido")
+print("Serie:",serie)            
+print("Valor maximo=",max(serie))
+print("Valor minimo=",min(serie))
