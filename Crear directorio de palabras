@@ -1,0 +1,13 @@
+texto=open("words.txt")
+directorio=dict()
+for line in texto:
+    line=line.rstrip()
+    print (line)
+    palabras=line.split(" ")
+    long=len(palabras)
+    cont=0
+    while cont<long:
+        palabra=palabras[cont]
+        cont=cont+1
+        directorio[palabra]=palabra
+print (directorio)
