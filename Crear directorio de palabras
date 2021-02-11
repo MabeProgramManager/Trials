@@ -11,3 +11,7 @@ for line in texto:
         cont=cont+1
         directorio[palabra]=palabra
 print (directorio)
+if checar in directorio:
+    print(" SI ESTA INCLUIDA!!!!! ")
+else:
+    print ("Esa palabra no existe en directorio")
