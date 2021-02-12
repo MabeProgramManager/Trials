@@ -6,7 +6,7 @@ try:
     fhand=open(fname)
 except:
     print("El archivo:",fname,"; no puede ser abierto o no existe")
-    exit
+    exit()
 for line in fhand:
     palabras=line.split()
     try:
