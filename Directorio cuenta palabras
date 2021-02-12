@@ -1,0 +1,21 @@
+import string
+#el archivo se llama: romeo.txt
+fname=input("da el nombre archivo:")
+try:
+    fhand=open(fname)
+except:
+    print("Este archivo no puede ser abierto:",fname)
+    exit
+cuentas=dict()
+for line in fhand:
+    line=line.rstrip()
+    print (line)
+    line=line.lower()
+    words=line.split()
+    print(words)
+    for word in words:
+        if word not in cuentas:
+            cuentas[word]=1
+        else:
+            cuentas[word]=cuentas[word]+1
+print (cuentas)
