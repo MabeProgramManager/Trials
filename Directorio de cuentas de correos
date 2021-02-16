@@ -1,0 +1,45 @@
+fname=input("Nombre del archivo?")
+# el nombre del archivo a usar es: mbox-short.txt
+directorio=dict()
+contador=0
+maximo=0
+atpos=0
+try:
+    fhand=open(fname)
+except:
+    print("El archivo:",fname,"; no puede ser abierto o no existe")
+    exit()
+for line in fhand:
+    palabras=line.split()
+    #print(palabras)
+    try:
+        if palabras[0]=="From" or palabras[0]=="From:":
+        	email="valido"
+        else:
+            email="vacio"
+    except:
+        email="vacio"
+    if email=="valido":
+        correo=palabras[1]
+        #print(correo)
+        atpos=correo.find("@")
+        atpos=atpos+1
+        #print(atpos)
+        long=len(correo)
+        #print(long)
+        escuela=correo[atpos:long]
+        #print(escuela)
+        if escuela not in directorio:
+            directorio[escuela]=1
+        else:
+            directorio[escuela]+=1
+    else:
+        contador=contador+1
+print("Encontramos",contador,"renglones vacios")
+print("El directorio de tu correo es:")
+for key in directorio:
+    print(key,":",directorio[key])
+    if directorio[key]>maximo:
+        maximo=directorio[key]
+        nombre=key
+print("La escuela que mas manda es:",nombre," mandó",maximo,"correos")
